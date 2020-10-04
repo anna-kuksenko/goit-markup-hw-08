@@ -1,0 +1,31 @@
+.company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .company__item {
+    margin-right: 30px;
+  }
+  
+  
+  .company__item:last-child {
+    margin-right: 0;
+  }
+  .company__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 90px;
+    border: 1px solid #afb1b8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    fill: #afb1b8;
+  
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .company__link.client__icon:hover {
+    fill: $accent-color;
+    border: 1px solid $accent-color;
+  }
