@@ -6,13 +6,16 @@
 
     @include for-size(mobile) {
       text-align: center;
-      padding: 60px 60px;
-      
+      align-items: center;
+      padding-bottom: 60px;
+      padding-top: 60px;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     @include for-size(tablet) {
       display: flex;
-      // align-items: baseline;
+      align-items: center;
       text-align: center;
       padding-top: 60px;
       padding-bottom: 60px;
@@ -21,6 +24,7 @@
     @include for-size(desktop) {
       display: flex;
       align-items: baseline;
+      text-align: left;
       padding: 60px 15px;
     } 
   }
@@ -28,10 +32,16 @@
   address {
     font-style: normal;
     margin-top: 20px;
+
   }
   
   .address-block{
     margin-right: 70px;
+
+    @include for-size(mobile) {
+      margin-right: 0;
+    }
+
   }
   
   .footer-data {
@@ -61,11 +71,6 @@
     line-height: 1.7;
   }
   
-  .footer-social-block{
-    margin-right: 93px;
-  }
-  
-  
   .social {
     
     margin: 0;
@@ -92,16 +97,18 @@
  
   .footer-form{
     position: relative;
-    // display: flex;
+    display: flex;
     padding-left: 0;
     padding-right: 0;
+
+   
   }
   
   
   .footer-input{
       width: 358px;
       height: 50px;
-      /* margin-right: 12px; */
+      margin-right: 12px; 
       padding-left: 16px;
       padding-top: 15px;
       padding-bottom: 15px;
@@ -111,6 +118,13 @@
       border-radius: 4px;
       color: rgba(255, 255, 255, 0.6);
       background-color: var(--dark-background-color);
+  
+    @include for-size(mobile) {
+      width: 450px;
+      margin-right: 0;
+    }
+
+
   }
    
   
@@ -138,6 +152,11 @@
   
     width: 24px;
     height: 24px;
+  }
+
+  .footer-social-block {
+    margin-top: 60px;
+    padding-bottom: 20px;
   }
   
   

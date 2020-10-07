@@ -32,5 +32,10 @@
     font-size: 36px;
     line-height: 1, 2;
     text-align: center;
+
+    @include for-size(tablet) {
+      margin-top: 0;
+      margin-bottom: 0;
+  }
   }
   

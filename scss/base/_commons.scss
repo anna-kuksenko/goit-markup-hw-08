@@ -6,11 +6,10 @@ html {
   *::before,
   *::after {
     box-sizing: inherit;
-    // outline: 2px solid red;
   }
   
   body {
-    @include font (14px, 1.625);
+    // @include font (14px, 1.625);
     background-color: $primary-background-color;
     color: $primary-text-color;
   
