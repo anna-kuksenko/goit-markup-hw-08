@@ -28,7 +28,7 @@
         @content;
       }
     } @else if $range == tablet-only {
-      @media (max-width: #{$tablet - 1}) {
+      @media (max-width: #{$tablet}) {
         @content;
       }
     } @else if $range == desktop {

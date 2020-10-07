@@ -3,10 +3,26 @@
   } 
   
   .footer-block {
-   
-    display: flex;
-    align-items: baseline;
-    padding: 60px 15px;
+
+    @include for-size(mobile) {
+      text-align: center;
+      padding: 60px 60px;
+      
+    }
+
+    @include for-size(tablet) {
+      display: flex;
+      // align-items: baseline;
+      text-align: center;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    @include for-size(desktop) {
+      display: flex;
+      align-items: baseline;
+      padding: 60px 15px;
+    } 
   }
   
   address {
@@ -76,7 +92,7 @@
  
   .footer-form{
     position: relative;
-    display: flex;
+    // display: flex;
     padding-left: 0;
     padding-right: 0;
   }
