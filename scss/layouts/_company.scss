@@ -5,13 +5,30 @@
     align-items: center;
   }
   .company__item {
-    margin-right: 30px;
+
+    @include for-size(mobile) {
+      width: calc(100% - 4 * 15px) /2 ;
+      margin: 15px;
+    }
+
+    @include for-size(tablet) {
+      width: calc(100% - 6 * 15px) /3 ;
+      margin: 15px;
+    }
+
+    @include for-size(desktop-only) {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    } 
+    
   }
   
-  
-  .company__item:last-child {
-    margin-right: 0;
-  }
   .company__link {
     display: inline-flex;
     justify-content: center;

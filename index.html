@@ -15,12 +15,19 @@
     <link rel="stylesheet" href="./css/styles.min.css" />
   </head>
   <body>
-    <header class="border">
+    <header class="nav-header">
       <nav class="container main-nav">
         <a href="./index.html" class="logo link">
           <span class="logo-header">Web</span>Studio
         </a>
-        <!-- <ul class="site-nav list">
+        <!-- <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-box" data-menu-button>
+          <svg width="40px" height="40px" aria-label="Кнопка меню">
+            <use class="icon-burger" href="./images/sprite.svg#icon-menu"></use>
+             <use class="icon-close" href="./images/sprite.svg#icon-menu-close"></use>   
+          </svg>
+      </button> -->
+         <div class="nav"> 
+        <ul class="site-nav list">
           <li class="site-nav__item">
             <a href="./index.html" class="line link current">Студия</a>
           </li>
@@ -55,7 +62,8 @@
             >
             
           </li>
-        </ul>   -->
+        </ul>   
+      </div> 
       </nav>
     </header>
 
@@ -358,7 +366,7 @@
         </div>
       </section>
 
-      <!-- <section class="section-clients">
+       <section class="section-clients">
         <h2 class="section-clients__heading">Постоянные клиенты</h2>
         <div class="container">
           <ul class="list company">
@@ -407,7 +415,7 @@
           </ul>
         </div>
       </section>
-    </main> -->
+    </main> 
 
     <footer class="info">
       <div class="container footer-block">
@@ -488,7 +496,6 @@
                 <use href="./img/icons/sprite.svg#icon-icon-send"></use>
               </svg>
             </button>  
-            
         </form>
           
         </div>

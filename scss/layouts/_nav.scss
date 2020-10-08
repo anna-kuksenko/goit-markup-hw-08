@@ -1,7 +1,49 @@
 
+  .nav {
+
+    @include for-size(mobile) {
+      display: none;
+      }
+
+      @include for-size(tablet) {
+        display: flex;
+        
+        }
+
+      @include for-size(desktop) {
+        display: flex;
+        }
+  }
+
+  .nav-header{
+
+    @include for-size(mobile) {
+      padding: 16px 15px;
+      }
+
+    @include for-size(mobile) {
+      padding: 0;
+     }
+     @include for-size(desktop) {
+      padding: 0;
+      }
+
+    
+  }
+
   .main-nav {
-    // display: flex;
-    // align-items: center;
+
+      @include for-size(tablet) {
+        display: flex;
+        align-items: center;
+        
+        }
+
+      @include for-size(desktop) {
+        // display: flex;
+        align-items: center;
+        }
+
   }
 
   .site-nav {
@@ -38,20 +80,53 @@
     }
     
     .auth-nav {
-      display: flex;
-      margin-left: auto;
+      // display: flex;
+      // margin-left: auto;
+
+      @include for-size(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-left: 0;
+        }
+
+        @include for-size(desktop) {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          margin-left: 305px;
+          }
+
+
     }
     
     .auth-nav__header-contacts {
-      display: block;
-      padding-top: 32px;
-      padding-bottom: 32px;
+      padding-top: 0;
+        padding-bottom: 0;
 
+      // @include for-size(tablet) {
+      //   padding-top: 0;
+      //   padding-bottom: 0;
+      // }
+
+      // @include for-size(desktop) {
+      //   display: block;
+      // padding-top: 32px;
+      // padding-bottom: 32px;
+      // }
     }
     
     .site-nav .site-nav__item + .site-nav__item,
     .auth-nav .auth-nav__item + .auth-nav__item {
       margin-left: 50px;
+    }
+
+    .auth-nav__item {
+      @include for-size(tablet-only) {
+        width: 116px;
+        margin-left: 50px;
+      }
+     
     }
 
     .envelope {

@@ -175,16 +175,26 @@ button:focus {
   color: #ffffff;
 }
 
-.button-flex {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 94px;
-  margin-bottom: 34px;
+@media (min-width: 1280px) {
+  .button-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 94px;
+    margin-bottom: 34px;
+  }
 }
 
-.section-button {
-  padding-bottom: 94px;
+@media (min-width: 1280px) {
+  .section-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 94px;
+  }
 }
 
 button:focus {
@@ -253,7 +263,7 @@ button:focus {
 
 @media (min-width: 1280px) {
   .container {
-    width: 1200px;
+    width: 1280px;
   }
 }
 
@@ -782,12 +792,18 @@ textarea::placeholder {
           align-items: center;
 }
 
-.company__item {
-  margin-right: 30px;
+@media (min-width: 480px) {
+  .company__item {
+    width: calc(100% - 4 * 15px)/2;
+    margin: 15px;
+  }
 }
 
-.company__item:last-child {
-  margin-right: 0;
+@media (min-width: 768px) {
+  .company__item {
+    width: calc(100% - 6 * 15px)/3;
+    margin: 15px;
+  }
 }
 
 .company__link {
@@ -934,14 +950,18 @@ textarea::placeholder {
 
 @media (min-width: 480px) {
   .footer-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     text-align: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-bottom: 60px;
-    padding-top: 60px;
-    padding-left: 0;
-    padding-right: 0;
+    min-height: 603px;
+    padding: 60px 15px;
+    min-height: 603px;
   }
 }
 
@@ -950,12 +970,13 @@ textarea::placeholder {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    text-align: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 76px;
   }
 }
 
@@ -968,7 +989,9 @@ textarea::placeholder {
         -ms-flex-align: baseline;
             align-items: baseline;
     text-align: left;
-    padding: 60px 15px;
+    max-height: 252px;
+    padding: 60px 215px;
+    margin: 0;
   }
 }
 
@@ -977,13 +1000,22 @@ address {
   margin-top: 20px;
 }
 
-.address-block {
-  margin-right: 70px;
-}
-
 @media (min-width: 480px) {
   .address-block {
-    margin-right: 0;
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .address-block {
+    margin-right: 165px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .address-block {
+    margin-right: 70px;
   }
 }
 
@@ -1031,6 +1063,27 @@ address {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+@media (min-width: 480px) {
+  .footer-social-block {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-social-block {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer-social-block {
+    margin-top: 0;
+    margin-right: 93px;
+  }
+}
+
 .footer-social-block .social-icons {
   margin-bottom: 0;
 }
@@ -1064,6 +1117,20 @@ address {
 @media (min-width: 480px) {
   .footer-input {
     width: 450px;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-input {
+    width: 450px;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer-input {
+    width: 358px;
     margin-right: 0;
   }
 }
@@ -1140,11 +1207,6 @@ input::placeholder {
   height: 24px;
 }
 
-.footer-social-block {
-  margin-top: 60px;
-  padding-bottom: 20px;
-}
-
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1159,6 +1221,7 @@ input::placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 1600px;
   min-height: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -1189,6 +1252,65 @@ input::placeholder {
 @media (min-width: 1280px) {
   .hero__title {
     font-size: 44px;
+  }
+}
+
+@media (min-width: 480px) {
+  .nav {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1280px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 480px) {
+  .nav-header {
+    padding: 16px 15px;
+  }
+}
+
+@media (min-width: 480px) {
+  .nav-header {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .nav-header {
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main-nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1229,22 +1351,49 @@ input::placeholder {
           transform: scaleX(1);
 }
 
-.auth-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
+@media (min-width: 768px) {
+  .auth-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .auth-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 305px;
+  }
 }
 
 .auth-nav__header-contacts {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .site-nav .site-nav__item + .site-nav__item,
 .auth-nav .auth-nav__item + .auth-nav__item {
   margin-left: 50px;
+}
+
+@media (max-width: 768px) {
+  .auth-nav__item {
+    width: 116px;
+    margin-left: 50px;
+  }
 }
 
 .envelope {

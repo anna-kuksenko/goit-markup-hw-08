@@ -5,27 +5,32 @@
   .footer-block {
 
     @include for-size(mobile) {
+      display: flex;
+      flex-wrap: wrap;
       text-align: center;
       align-items: center;
-      padding-bottom: 60px;
-      padding-top: 60px;
-      padding-left: 0;
-      padding-right: 0;
+      min-height: 603px;
+      padding: 60px 15px;
+      min-height: 603px;
     }
 
     @include for-size(tablet) {
       display: flex;
-      align-items: center;
+     flex-wrap: wrap;
       text-align: center;
-      padding-top: 60px;
-      padding-bottom: 60px;
+      align-items: center;
+      
+      padding: 60px 76px;
     }
 
     @include for-size(desktop) {
       display: flex;
+     
       align-items: baseline;
       text-align: left;
-      padding: 60px 15px;
+      max-height: 252px;
+      padding: 60px 215px;
+      margin: 0;
     } 
   }
   
@@ -36,10 +41,18 @@
   }
   
   .address-block{
-    margin-right: 70px;
-
+    
     @include for-size(mobile) {
-      margin-right: 0;
+      margin-right: 40px;
+      margin-bottom: 0; 
+    }
+
+    @include for-size(tablet) {
+      margin-right: 165px;
+    }
+
+    @include for-size(desktop) {
+      margin-right: 70px;
     }
 
   }
@@ -90,6 +103,24 @@
     fill: $white-color;
     background-color: rgba(255, 255, 255, 0.1);
   }
+
+  .footer-social-block{
+
+    @include for-size(mobile) {
+      margin-top: 60px;
+      margin-bottom: 60px;
+      margin-right: 0;
+    }
+
+    @include for-size(tablet) {
+      margin: 0;
+    }
+
+    @include for-size(desktop) {
+      margin-top: 0;
+      margin-right: 93px;
+    }
+  }
   
   .footer-social-block .social-icons{
     margin-bottom: 0;
@@ -100,8 +131,7 @@
     display: flex;
     padding-left: 0;
     padding-right: 0;
-
-   
+    
   }
   
   
@@ -124,7 +154,15 @@
       margin-right: 0;
     }
 
+    @include for-size(tablet) {
+      width: 450px;
+      margin-right: 0;
+    }
 
+    @include for-size(desktop) {
+      width: 358px;
+      margin-right: 0;
+    }
   }
    
   
@@ -154,9 +192,5 @@
     height: 24px;
   }
 
-  .footer-social-block {
-    margin-top: 60px;
-    padding-bottom: 20px;
-  }
   
   
