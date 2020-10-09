@@ -418,6 +418,13 @@ form {
   letter-spacing: 0.03em;
 }
 
+@media (max-width: 768px) {
+  .logo {
+    width: 134px;
+    height: 28px;
+  }
+}
+
 .logo-header {
   color: #2196f3;
   font-family: Raleway;
@@ -806,6 +813,18 @@ textarea::placeholder {
   }
 }
 
+@media (min-width: 1280px) {
+  .company__item {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+  .company__item:last-child {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
 .company__link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -959,9 +978,7 @@ textarea::placeholder {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    min-height: 603px;
     padding: 60px 15px;
-    min-height: 603px;
   }
 }
 
@@ -989,6 +1006,7 @@ textarea::placeholder {
         -ms-flex-align: baseline;
             align-items: baseline;
     text-align: left;
+    min-width: 1600px;
     max-height: 252px;
     padding: 60px 215px;
     margin: 0;
@@ -1379,11 +1397,6 @@ input::placeholder {
   }
 }
 
-.auth-nav__header-contacts {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
 .site-nav .site-nav__item + .site-nav__item,
 .auth-nav .auth-nav__item + .auth-nav__item {
   margin-left: 50px;
@@ -1434,6 +1447,12 @@ input::placeholder {
   letter-spacing: 0.02em;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  .auth-nav .link {
+    padding: 0;
+  }
 }
 
 .site-nav .link:hover,

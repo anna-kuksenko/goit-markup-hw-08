@@ -9,9 +9,9 @@
       flex-wrap: wrap;
       text-align: center;
       align-items: center;
-      min-height: 603px;
+     
       padding: 60px 15px;
-      min-height: 603px;
+      
     }
 
     @include for-size(tablet) {
@@ -28,6 +28,7 @@
      
       align-items: baseline;
       text-align: left;
+      min-width: 1600px;
       max-height: 252px;
       padding: 60px 215px;
       margin: 0;

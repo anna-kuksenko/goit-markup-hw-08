@@ -16,7 +16,7 @@
       margin: 15px;
     }
 
-    @include for-size(desktop-only) {
+    @include for-size(desktop) {
       margin-top: 0;
       margin-bottom: 0;
       margin-right: 30px;

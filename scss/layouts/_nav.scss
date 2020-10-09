@@ -100,21 +100,6 @@
 
     }
     
-    .auth-nav__header-contacts {
-      padding-top: 0;
-        padding-bottom: 0;
-
-      // @include for-size(tablet) {
-      //   padding-top: 0;
-      //   padding-bottom: 0;
-      // }
-
-      // @include for-size(desktop) {
-      //   display: block;
-      // padding-top: 32px;
-      // padding-bottom: 32px;
-      // }
-    }
     
     .site-nav .site-nav__item + .site-nav__item,
     .auth-nav .auth-nav__item + .auth-nav__item {
@@ -123,6 +108,7 @@
 
     .auth-nav__item {
       @include for-size(tablet-only) {
+
         width: 116px;
         margin-left: 50px;
       }
@@ -172,6 +158,15 @@
       letter-spacing: 0.02em;
     
       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+     
+    }
+
+    .auth-nav .link{
+      @include for-size(tablet) {
+        padding: 0;
+        }
+
     }
     
     .site-nav .link:hover,
