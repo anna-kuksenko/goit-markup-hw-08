@@ -1,0 +1,43 @@
+.button {
+	font-family: inherit;
+	display: inline-block;
+	min-width: 200px;
+
+	padding: 10px 32px;
+	border-radius: 4px;
+	letter-spacing: 0.06em;
+	border-color: transparent;
+	cursor: pointer;
+	outline: $accent-text-color;
+}
+
+.button--primary {
+	color: $primary-text-color-button;
+	background-color: $primary-bgc-button;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.87;
+	text-align: center;
+}
+
+.button--secondary {
+	min-width: 73px;
+	padding: 6px 22px;
+
+	border-color: transparent;
+
+	color: $secondary-text-color-button;
+	background-color: $secondary-bgc-button;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.62;
+	text-align: center;
+
+	transition: color, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		color: $primary-text-color-button;
+		background-color: $primary-bgc-button;
+	}
+}

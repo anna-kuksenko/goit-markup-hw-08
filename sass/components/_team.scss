@@ -1,0 +1,67 @@
+.team {
+	background-color: $secondary-bg-color;
+	font-size: 16px;
+	line-height: 1.19;
+}
+
+.team__member {
+	background-color: $primary-bg-color;
+
+	border-radius: 0px 0px 4px 4px;
+	overflow: hidden;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+	@include for-size(tablet) {
+		width: calc((100% - 30px) / 2);
+	}
+	@include for-size(desktop) {
+		width: calc((100% - 90px) / 4);
+	}
+}
+
+.team__member:nth-child(odd) {
+	@include for-size(tablet) {
+		margin-right: 30px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.team__member:not(:nth-last-child(-n + 2)) {
+		margin-bottom: 30px;
+	}
+}
+
+.team__member:not(:last-child) {
+	@include for-size(mobile-only) {
+		margin-bottom: 30px;
+	}
+
+	@include for-size(desktop) {
+		margin-right: 30px;
+	}
+}
+
+.team__text {
+	padding-top: 30px;
+
+	@include for-size(mobile-tablet-only) {
+		padding-bottom: 24px;
+	}
+	@include for-size(desktop) {
+		padding-bottom: 30px;
+	}
+
+	text-align: center;
+}
+
+.team__member-name {
+	margin-top: 0;
+	color: $title-text-color;
+	font-weight: 500;
+}
+
+.team__member-position {
+	color: $primary-text-color;
+	margin-bottom: 0;
+	margin-top: 0;
+}
